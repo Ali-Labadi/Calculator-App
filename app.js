@@ -12,37 +12,13 @@ function addNumsToInput(num) {
   currOperation.innerText += num;
 }
 
-plusBtn.addEventListener("click", () => {
-  operand = "+";
+function addOperandToInput(o) {
+  operand = o;
   leftSideValue = currOperation.innerText;
-  currOperation.innerText += "+";
+  currOperation.innerText += o;
   prevOperation.innerText = currOperation.innerText;
   currOperation.innerText = "";
-});
-
-minusBtn.addEventListener("click", () => {
-  operand = "-";
-  leftSideValue = currOperation.innerText;
-  currOperation.innerText += "-";
-  prevOperation.innerText = currOperation.innerText;
-  currOperation.innerText = "";
-});
-
-mutiplyBtn.addEventListener("click", () => {
-  operand = "*";
-  leftSideValue = currOperation.innerText;
-  currOperation.innerText += "x";
-  prevOperation.innerText = currOperation.innerText;
-  currOperation.innerText = "";
-});
-
-divideBtn.addEventListener("click", () => {
-  operand = "/";
-  leftSideValue = currOperation.innerText;
-  currOperation.innerText += "÷";
-  prevOperation.innerText = currOperation.innerText;
-  currOperation.innerText = "";
-});
+}
 
 equalsBtn.addEventListener("click", () => {
   rightSideValue = currOperation.innerText;
